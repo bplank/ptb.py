@@ -508,7 +508,9 @@ def main(args):
                 elif fmt == 'sentence':
                     print(' '.join(l.word for l in leaves(t)))
                 elif fmt == 'tagged_sentence':
-                    print(' '.join('_'.join((l.word,l.pos)) for l in leaves(t)))
+#                    print(' '.join('_'.join((l.word,l.pos)) for l in leaves(t)))
+                    print('\n'.join('\t'.join((l.word,l.pos)) for l in leaves(t)))
+                    print()
                 else:
                     raise ValueError()
 
